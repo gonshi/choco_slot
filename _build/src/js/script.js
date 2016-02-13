@@ -75,18 +75,19 @@
             fjs.parentNode.insertBefore(js, fjs);
 
             $('.facebook').on('click', () => {
-                let description = '';
+                let name = '';
                 for(let i = 0; i < this.SLOT_NUM; i++){
-                    description += `${this.$slot_txt[i].text()} `;
+                    name += `${this.$slot_txt[i].text()} `;
                 }
 
-                description += ' #チョコ俳句スロット';
+                name += ' #チョコ俳句スロット';
 
                 FB.ui({
                     method: 'feed',
                     link: this.URL,
                     picture: $('meta[property="og:image"').attr('content'),
-                    description: description
+                    name: name,
+                    description: $('title').text()
                 });
             });
 

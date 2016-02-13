@@ -87,18 +87,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 fjs.parentNode.insertBefore(js, fjs);
 
                 $('.facebook').on('click', function () {
-                    var description = '';
+                    var name = '';
                     for (var i = 0; i < _this2.SLOT_NUM; i++) {
-                        description += _this2.$slot_txt[i].text() + ' ';
+                        name += _this2.$slot_txt[i].text() + ' ';
                     }
 
-                    description += ' #チョコ俳句スロット';
+                    name += ' #チョコ俳句スロット';
 
                     FB.ui({
                         method: 'feed',
                         link: _this2.URL,
                         picture: $('meta[property="og:image"').attr('content'),
-                        description: description
+                        name: name,
+                        description: $('title').text()
                     });
                 });
 
