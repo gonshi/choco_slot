@@ -330,6 +330,10 @@
                     }
                 }
             });
+
+            if(!location.href.match(localhost)){
+                $('body').hide();
+            }
         }
     }
 

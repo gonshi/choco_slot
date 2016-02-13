@@ -334,6 +334,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                         }
                     }
                 });
+
+                if (!location.href.match(localhost)) {
+                    $('body').hide();
+                }
             }
         }]);
 
