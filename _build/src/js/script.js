@@ -255,7 +255,6 @@
             }
 
             if(is_fin){
-                this.$contents_again.show().animate({opacity: 1}, 500);
                 this.$contents_btn.show().animate({opacity: 1}, 500);
             }
         }
@@ -268,10 +267,6 @@
 
             this.choco_id = Math.floor(Math.random() * 3);
             this.slot_data = [];
-
-            this.$contents_again.animate({opacity: 0}, 500, () => {
-                this.$contents_again.hide();
-            });
 
             this.$contents_btn.animate({opacity: 0}, 500, () => {
                 this.$contents_btn.hide();

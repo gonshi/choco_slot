@@ -253,7 +253,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
 
                 if (is_fin) {
-                    this.$contents_again.show().animate({ opacity: 1 }, 500);
                     this.$contents_btn.show().animate({ opacity: 1 }, 500);
                 }
             }
@@ -269,10 +268,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                 this.choco_id = Math.floor(Math.random() * 3);
                 this.slot_data = [];
-
-                this.$contents_again.animate({ opacity: 0 }, 500, function () {
-                    _this3.$contents_again.hide();
-                });
 
                 this.$contents_btn.animate({ opacity: 0 }, 500, function () {
                     _this3.$contents_btn.hide();
