@@ -1,0 +1,180 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$index-ad-name: 'index_ad';
+$index-ad-x: 0px;
+$index-ad-y: 164px;
+$index-ad-offset-x: 0px;
+$index-ad-offset-y: -164px;
+$index-ad-width: 336px;
+$index-ad-height: 69px;
+$index-ad-total-width: 511px;
+$index-ad-total-height: 314px;
+$index-ad-image: '../img/index.png';
+$index-ad: (0px, 164px, 0px, -164px, 336px, 69px, 511px, 314px, '../img/index.png', 'index_ad', );
+$index-again-name: 'index_again';
+$index-again-x: 340px;
+$index-again-y: 164px;
+$index-again-offset-x: -340px;
+$index-again-offset-y: -164px;
+$index-again-width: 157px;
+$index-again-height: 52px;
+$index-again-total-width: 511px;
+$index-again-total-height: 314px;
+$index-again-image: '../img/index.png';
+$index-again: (340px, 164px, -340px, -164px, 157px, 52px, 511px, 314px, '../img/index.png', 'index_again', );
+$index-aseetsu-name: 'index_aseetsu';
+$index-aseetsu-x: 131px;
+$index-aseetsu-y: 277px;
+$index-aseetsu-offset-x: -131px;
+$index-aseetsu-offset-y: -277px;
+$index-aseetsu-width: 85px;
+$index-aseetsu-height: 15px;
+$index-aseetsu-total-width: 511px;
+$index-aseetsu-total-height: 314px;
+$index-aseetsu-image: '../img/index.png';
+$index-aseetsu: (131px, 277px, -131px, -277px, 85px, 15px, 511px, 314px, '../img/index.png', 'index_aseetsu', );
+$index-facebook-name: 'index_facebook';
+$index-facebook-x: 139px;
+$index-facebook-y: 237px;
+$index-facebook-offset-x: -139px;
+$index-facebook-offset-y: -237px;
+$index-facebook-width: 111px;
+$index-facebook-height: 36px;
+$index-facebook-total-width: 511px;
+$index-facebook-total-height: 314px;
+$index-facebook-image: '../img/index.png';
+$index-facebook: (139px, 237px, -139px, -237px, 111px, 36px, 511px, 314px, '../img/index.png', 'index_facebook', );
+$index-gonshi-name: 'index_gonshi';
+$index-gonshi-x: 0px;
+$index-gonshi-y: 277px;
+$index-gonshi-offset-x: 0px;
+$index-gonshi-offset-y: -277px;
+$index-gonshi-width: 127px;
+$index-gonshi-height: 17px;
+$index-gonshi-total-width: 511px;
+$index-gonshi-total-height: 314px;
+$index-gonshi-image: '../img/index.png';
+$index-gonshi: (0px, 277px, 0px, -277px, 127px, 17px, 511px, 314px, '../img/index.png', 'index_gonshi', );
+$index-kino-name: 'index_kino';
+$index-kino-x: 398px;
+$index-kino-y: 237px;
+$index-kino-offset-x: -398px;
+$index-kino-offset-y: -237px;
+$index-kino-width: 88px;
+$index-kino-height: 15px;
+$index-kino-total-width: 511px;
+$index-kino-total-height: 314px;
+$index-kino-image: '../img/index.png';
+$index-kino: (398px, 237px, -398px, -237px, 88px, 15px, 511px, 314px, '../img/index.png', 'index_kino', );
+$index-made-name: 'index_made';
+$index-made-x: 0px;
+$index-made-y: 298px;
+$index-made-offset-x: 0px;
+$index-made-offset-y: -298px;
+$index-made-width: 78px;
+$index-made-height: 16px;
+$index-made-total-width: 511px;
+$index-made-total-height: 314px;
+$index-made-image: '../img/index.png';
+$index-made: (0px, 298px, 0px, -298px, 78px, 16px, 511px, 314px, '../img/index.png', 'index_made', );
+$index-muuuuuupon-name: 'index_muuuuuupon';
+$index-muuuuuupon-x: 254px;
+$index-muuuuuupon-y: 237px;
+$index-muuuuuupon-offset-x: -254px;
+$index-muuuuuupon-offset-y: -237px;
+$index-muuuuuupon-width: 140px;
+$index-muuuuuupon-height: 18px;
+$index-muuuuuupon-total-width: 511px;
+$index-muuuuuupon-total-height: 314px;
+$index-muuuuuupon-image: '../img/index.png';
+$index-muuuuuupon: (254px, 237px, -254px, -237px, 140px, 18px, 511px, 314px, '../img/index.png', 'index_muuuuuupon', );
+$index-ttl-name: 'index_ttl';
+$index-ttl-x: 0px;
+$index-ttl-y: 0px;
+$index-ttl-offset-x: 0px;
+$index-ttl-offset-y: 0px;
+$index-ttl-width: 511px;
+$index-ttl-height: 160px;
+$index-ttl-total-width: 511px;
+$index-ttl-total-height: 314px;
+$index-ttl-image: '../img/index.png';
+$index-ttl: (0px, 0px, 0px, 0px, 511px, 160px, 511px, 314px, '../img/index.png', 'index_ttl', );
+$index-twitter-name: 'index_twitter';
+$index-twitter-x: 0px;
+$index-twitter-y: 237px;
+$index-twitter-offset-x: 0px;
+$index-twitter-offset-y: -237px;
+$index-twitter-width: 135px;
+$index-twitter-height: 36px;
+$index-twitter-total-width: 511px;
+$index-twitter-total-height: 314px;
+$index-twitter-image: '../img/index.png';
+$index-twitter: (0px, 237px, 0px, -237px, 135px, 36px, 511px, 314px, '../img/index.png', 'index_twitter', );
+$index-width: 511px;
+$index-height: 314px;
+$index-image: '../img/index.png';
+$index-sprites: ($index-ad, $index-again, $index-aseetsu, $index-facebook, $index-gonshi, $index-kino, $index-made, $index-muuuuuupon, $index-ttl, $index-twitter, );
+$index: (511px, 314px, '../img/index.png', $index-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
