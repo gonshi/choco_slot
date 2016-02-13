@@ -277,6 +277,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 this.$contents_btn.animate({ opacity: 0 }, 500, function () {
                     _this3.$contents_btn.hide();
                 });
+
+                window.ga('restart', 'event', 'button', 'click', 'restart');
             }
         }, {
             key: 'startSlot',
@@ -322,7 +324,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 /*-----------------------------------
                  * INIT
                  -----------------------------------*/
-                createjs.Ticker.setFPS(12);
+                if (location.search === '?slow') {
+                    createjs.Ticker.setFPS(3);
+                } else if (location.search === '?fast') {
+                    createjs.Ticker.setFPS(60);
+                } else {
+                    createjs.Ticker.setFPS(12);
+                }
+
                 createjs.Ticker.addEventListener('tick', function (e) {
                     for (var i = 0; i < _this4.SLOT_NUM; i++) {
                         if (!_this4.is_stop[i]) {

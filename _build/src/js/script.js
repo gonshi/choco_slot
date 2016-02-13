@@ -276,6 +276,8 @@
             this.$contents_btn.animate({opacity: 0}, 500, () => {
                 this.$contents_btn.hide();
             });
+
+            window.ga('restart', 'event', 'button', 'click', 'restart');
         }
 
         startSlot(words){
@@ -318,7 +320,16 @@
             /*-----------------------------------
              * INIT
              -----------------------------------*/
-            createjs.Ticker.setFPS(12);
+            if(location.search === '?slow'){
+                createjs.Ticker.setFPS(3);
+            }
+            else if(location.search === '?fast'){
+                createjs.Ticker.setFPS(60);
+            }
+            else{
+                createjs.Ticker.setFPS(12);
+            }
+
             createjs.Ticker.addEventListener('tick', (e) => {
                 for(let i = 0; i < this.SLOT_NUM; i++){
                     if(!this.is_stop[i]){
