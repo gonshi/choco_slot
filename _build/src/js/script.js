@@ -331,7 +331,7 @@
                 }
             });
 
-            if(!location.href.match(localhost)){
+            if(!location.href.match('localhost')){
                 $('body').hide();
             }
         }
