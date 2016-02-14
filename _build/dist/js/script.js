@@ -97,7 +97,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     FB.ui({
                         method: 'feed',
                         link: _this2.URL,
-                        picture: $('meta[property="og:image"').attr('content'),
+                        picture: $('meta[property="og:image"]').attr('content'),
                         name: name,
                         description: $('title').text()
                     });
@@ -319,9 +319,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 /*-----------------------------------
                  * INIT
                  -----------------------------------*/
-                if (location.search === '?slow') {
+                if (location.search === '?yukkuri') {
                     createjs.Ticker.setFPS(3);
-                } else if (location.search === '?fast') {
+                } else if (location.search === '?hayaku') {
                     createjs.Ticker.setFPS(60);
                 } else {
                     createjs.Ticker.setFPS(12);

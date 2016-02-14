@@ -85,7 +85,7 @@
                 FB.ui({
                     method: 'feed',
                     link: this.URL,
-                    picture: $('meta[property="og:image"').attr('content'),
+                    picture: $('meta[property="og:image"]').attr('content'),
                     name: name,
                     description: $('title').text()
                 });
@@ -315,10 +315,10 @@
             /*-----------------------------------
              * INIT
              -----------------------------------*/
-            if(location.search === '?slow'){
+            if(location.search === '?yukkuri'){
                 createjs.Ticker.setFPS(3);
             }
-            else if(location.search === '?fast'){
+            else if(location.search === '?hayaku'){
                 createjs.Ticker.setFPS(60);
             }
             else{
