@@ -107,15 +107,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 $('.twitter').on('click', function (e) {
                     e.preventDefault();
 
-                    var dualScreenLeft = undefined;
-                    var dualScreenTop = undefined;
-                    var windowWidth = undefined;
-                    var windowHeight = undefined;
+                    var dualScreenLeft = void 0;
+                    var dualScreenTop = void 0;
+                    var windowWidth = void 0;
+                    var windowHeight = void 0;
                     var popupWidth = 650;
                     var popupHeight = 450;
-                    var top = undefined;
-                    var left = undefined;
-                    var href = undefined;
+                    var top = void 0;
+                    var left = void 0;
+                    var href = void 0;
                     var description = '';
                     var text_length = 0;
 
@@ -197,14 +197,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }win.gdata = {};
                 win.gdata.io = {};
                 win.gdata.io.handleScriptLoaded = function (response) {
-                    for (var i = 0; i < response.feed.entry.length; i++) {
+                    for (var _i = 0; _i < response.feed.entry.length; _i++) {
                         for (var exp_i = 0; exp_i < EXP.length; exp_i++) {
-                            var result = undefined;
+                            var result = void 0;
 
-                            if (response.feed.entry[i].content.$t.match(EXP[exp_i])) {
+                            if (response.feed.entry[_i].content.$t.match(EXP[exp_i])) {
                                 var span_text = '';
                                 // spanで全文字を囲う
-                                while (result = re.exec(response.feed.entry[i].content.$t.match(EXP[exp_i])[2])) {
+                                while (result = re.exec(response.feed.entry[_i].content.$t.match(EXP[exp_i])[2])) {
                                     if (result[0].match(/ー|【|】/)) {
                                         span_text += '<span class="is_vertical">' + result[0] + '</span>';
                                     } else {
@@ -217,20 +217,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                                     text: span_text
                                 });
                             }
-                            if (response.feed.entry[i].content.$t.match(CHOCO_EXP[exp_i])) {
-                                var span_text = '';
+                            if (response.feed.entry[_i].content.$t.match(CHOCO_EXP[exp_i])) {
+                                var _span_text = '';
                                 // spanで全文字を囲う
-                                while (result = re.exec(response.feed.entry[i].content.$t.match(CHOCO_EXP[exp_i])[2])) {
+                                while (result = re.exec(response.feed.entry[_i].content.$t.match(CHOCO_EXP[exp_i])[2])) {
                                     if (result[0].match(/ー|【|】/)) {
-                                        span_text += '<span class="is_vertical">' + result[0] + '</span>';
+                                        _span_text += '<span class="is_vertical">' + result[0] + '</span>';
                                     } else {
-                                        span_text += '<span>' + result[0] + '</span>';
+                                        _span_text += '<span>' + result[0] + '</span>';
                                     }
                                 }
 
                                 words[exp_i].push({
                                     is_choco: true,
-                                    text: span_text
+                                    text: _span_text
                                 });
                             }
                         }
@@ -301,8 +301,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     $(e.target).addClass('is-stop');
 
                     // チョコワードと非チョコワードの制御
-                    for (var i = 0; i < words[slot_i].length; i++) {
-                        var word_i = (_this4.slot_data[slot_i].word_i + i) % words[slot_i].length;
+                    for (var _i2 = 0; _i2 < words[slot_i].length; _i2++) {
+                        var word_i = (_this4.slot_data[slot_i].word_i + _i2) % words[slot_i].length;
                         if (slot_i === _this4.choco_id === words[slot_i][word_i].is_choco) {
                             _this4.$slot_txt[slot_i].html(words[slot_i][word_i].text);
                             break;
@@ -328,14 +328,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
 
                 createjs.Ticker.addEventListener('tick', function (e) {
-                    for (var i = 0; i < _this4.SLOT_NUM; i++) {
-                        if (!_this4.is_stop[i]) {
-                            var word_i = Math.floor(e.runTime % words[i].length);
-                            _this4.slot_data[i] = {
+                    for (var _i3 = 0; _i3 < _this4.SLOT_NUM; _i3++) {
+                        if (!_this4.is_stop[_i3]) {
+                            var word_i = Math.floor(e.runTime % words[_i3].length);
+                            _this4.slot_data[_i3] = {
                                 word_i: word_i,
-                                is_choco: words[i][word_i].is_choco
+                                is_choco: words[_i3][word_i].is_choco
                             };
-                            _this4.$slot_txt[i].html(words[i][Math.floor(e.runTime % words[i].length)].text);
+                            _this4.$slot_txt[_i3].html(words[_i3][Math.floor(e.runTime % words[_i3].length)].text);
                         }
                     }
                 });

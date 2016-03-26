@@ -20,9 +20,13 @@ html(lang="ja")
     meta(name="twitter:title" content=title)
     meta(name="twitter:description" content=description)
     meta(name="twitter:image:src" content=ogp_img)
-    link(rel="shortcut icon" href="favicon.ico")
-    link(href="css/style.css" rel="stylesheet")
-    script(src="js/lib/modernizr.min.js")
+    link(rel="shortcut icon" href="./favicon.ico")
+    link(href="./css/style.css" rel="stylesheet")
+    script.
+      if(!location.pathname.match(/\/$/) && !location.href.match(/html$/)){
+        location.replace(location.href + '/');
+      }
+    script(src="./js/lib/modernizr.min.js")
     //
       ＿人人人人人人＿
       ＞　裏ワザ！　＜
@@ -99,9 +103,9 @@ html(lang="ja")
           a(href="https://twitter.com/gonshi_com" target="_blank")
         p.footer__member__inner.footer__muuuuuupon
           a(href="https://twitter.com/muuuuuupon" target="_blank")
-    script(src="js/lib/jquery-2.2.0.min.js")
-    script(src="js/lib/jquery.ba-throttle-debounce.min.js")
-    script(src="js/lib/easeljs-0.8.2.min.js")
-    script(src="js/script.js")
+    script(src="./js/lib/jquery-2.2.0.min.js")
+    script(src="./js/lib/jquery.ba-throttle-debounce.min.js")
+    script(src="./js/lib/easeljs-0.8.2.min.js")
+    script(src="./js/script.js")
     script
       include ga.js

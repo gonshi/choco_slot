@@ -13,6 +13,11 @@ gulp.task 'copy-preview', (dir) ->
         .pipe(gulp.dest('../html5-cl/taji/choco/'))
         .pipe($.size({ title: 'copy-preview' }))
 
+gulp.task 'copy-slot-maker', (dir) ->
+    gulp.src(config.path.dist + '**/*')
+        .pipe(gulp.dest('../../slot-maker/public/214/'))
+        .pipe($.size({ title: 'copy-slot-maker' }))
+
 # gulp.task 'copy:docs', () ->
 #     gulp.src([])
 #         .pipe(gulp.dest())
