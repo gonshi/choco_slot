@@ -6,12 +6,10 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 (function () {
-    'use strict';
+    var win = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : window;
+    var doc = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : document;
 
     // 半角英数字文字列を全角文字列に変換する
-
-    var win = arguments.length <= 0 || arguments[0] === undefined ? window : arguments[0];
-    var doc = arguments.length <= 1 || arguments[1] === undefined ? document : arguments[1];
     String.prototype.toTwoByteAlphaNumeric = function () {
         return this.replace(/[A-Za-z0-9]/g, function (s) {
             return String.fromCharCode(s.charCodeAt(0) + 0xFEE0);
@@ -27,6 +25,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
             this.is_sp = false;
 
+            this.$body = $('body');
             this.$slot = [];
             this.$slot_txt = [];
             this.$slot_click = [];
@@ -69,6 +68,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     this.is_sp = true;
                 }
 
+                if (this.is_sp) {
+                    this.$body.addClass('is-sp');
+                } else {
+                    this.$body.addClass('is-pc');
+                }
                 this.setSocial();
                 this.resize();
             }
@@ -173,7 +177,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }, {
             key: 'resize',
             value: function resize() {
-                if ($(window).height() > this.$contents.height() + 100) {
+                if ($(window).height() > this.$contents.height() + 300) {
                     this.$footer.addClass('is-bottom');
                 } else {
                     this.$footer.removeClass('is-bottom');

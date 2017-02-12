@@ -1,6 +1,4 @@
 (function(win = window, doc = document){
-    'use strict'
-
     // 半角英数字文字列を全角文字列に変換する
     String.prototype.toTwoByteAlphaNumeric = function(){
         return this.replace(/[A-Za-z0-9]/g, function(s) {
@@ -15,6 +13,7 @@
 
             this.is_sp = false;
 
+            this.$body = $('body');
             this.$slot = [];
             this.$slot_txt = [];
             this.$slot_click = [];
@@ -60,6 +59,12 @@
               this.is_sp = true;
             }
 
+            if(this.is_sp){
+                this.$body.addClass('is-sp');
+            }
+            else{
+                this.$body.addClass('is-pc');
+            }
             this.setSocial();
             this.resize();
         }
@@ -166,7 +171,7 @@
         }
 
         resize(){
-            if($(window).height() > this.$contents.height() + 100){
+            if($(window).height() > this.$contents.height() + 300){
                 this.$footer.addClass('is-bottom');
             }
             else{

@@ -2,7 +2,7 @@ doctype html
 html(lang="ja")
  head(prefix="og: http://ogp.me/ns# fb: http://www.facebook.com/2008/fbml")
     meta(charset="UTF-8")
-    meta(name="viewport", content="width=#{viewport}, minimum-scale=#{320 / viewport}, maximum-scale=#{320 / viewport}, user-scalable=yes")
+    meta(name="viewport", content="width=#{viewport}, user-scalable=no")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     title= title
     link(rel="apple-touch-icon" href="webclipicon.png")
@@ -24,7 +24,7 @@ html(lang="ja")
     link(href="./css/style.css" rel="stylesheet")
     script.
       if(!location.pathname.match(/\/$/) && !location.href.match(/html$/)){
-        location.replace(location.href + '/');
+        location.replace(location.origin + location.pathname + '/' + location.search);
       }
     script(src="./js/lib/modernizr.min.js")
     //
@@ -91,8 +91,17 @@ html(lang="ja")
           p.contents__btn__again もう１句
           p.contents__btn__twitter.twitter
       p.contents__ad
+        ins.adsbygoogle.only-sp(style="display:inline-block;width:320px;height:50px" data-ad-client="ca-pub-3459369038211382" data-ad-slot="1848938150")
+        script.
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        ins.adsbygoogle.only-pc(style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-3459369038211382" data-ad-slot="9871732555")
+        script.
+          (adsbygoogle = window.adsbygoogle || []).push({});
         a(href="http://amzn.to/1Pw1r2s" target="_blank") 俳句に飽きたら、短歌を味わおう。木下龍也『つむじ風、ここにあります』
     footer.footer
+      p.footer__slot-maker
+        a(href="https://slot-maker.com/")
+          img(src="./img/slot-maker.jpg" alt="スロットメーカー")
       div.footer__member
         p.footer__member__inner.footer__made
         p.footer__member__inner.footer__kino
@@ -103,6 +112,7 @@ html(lang="ja")
           a(href="https://twitter.com/gonshi_com" target="_blank")
         p.footer__member__inner.footer__muuuuuupon
           a(href="https://twitter.com/muuuuuupon" target="_blank")
+    script(async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js")
     script(src="./js/lib/jquery-2.2.0.min.js")
     script(src="./js/lib/jquery.ba-throttle-debounce.min.js")
     script(src="./js/lib/easeljs-0.8.2.min.js")

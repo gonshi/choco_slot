@@ -18,7 +18,7 @@ typeDist = ""
 # Directory
 root = "./"
 src = "#{root}src/"
-dist = "#{root}dist/"
+dist = "../../slot-maker/public/214/"
 # common = "#{root}dist/common/"
 # src_common = "#{root}src/common/"
 

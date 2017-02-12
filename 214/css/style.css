@@ -253,10 +253,10 @@ The `sprites` mixin generates identical output to the CSS template
 
 @include sprites($spritesheet-sprites);
 */
-.contents__btn__again, .contents__btn__facebook, .contents__btn__twitter, .contents__ad a, .footer__member__inner a {
+.contents__btn__again, .contents__btn__facebook, .contents__btn__twitter, .contents__ad a, .footer__slot-maker a, .footer__member__inner a {
   cursor: pointer;
 }
-.contents__btn__again:hover, .contents__btn__facebook:hover, .contents__btn__twitter:hover, .contents__ad a:hover, .footer__member__inner a:hover {
+.contents__btn__again:hover, .contents__btn__facebook:hover, .contents__btn__twitter:hover, .contents__ad a:hover, .footer__slot-maker a:hover, .footer__member__inner a:hover {
   opacity: 0.7;
 }
 
@@ -399,6 +399,9 @@ body {
   height: 36px;
 }
 
+.contents__ad {
+  text-align: center;
+}
 .contents__ad a {
   position: relative;
   display: block;
@@ -415,8 +418,7 @@ body {
 .footer {
   position: relative;
   width: 100%;
-  height: 60px;
-  margin: 0 auto;
+  padding: 1px 0;
   background-image: url("../img/border.png");
 }
 .footer.is-bottom {
@@ -426,21 +428,31 @@ body {
   right: 0;
 }
 
-.footer__member {
+.footer__slot-maker a {
   position: relative;
-  width: 640px;
-  height: 100%;
-  margin: 0 auto;
-  text-align: center;
+  display: block;
+  width: 220px;
+  margin: 30px auto 0;
+}
+.footer__slot-maker img {
+  width: 100%;
+  height: auto;
 }
 
-.footer__member__inner {
-  display: inline-block;
-  height: 60px;
-  line-height: 60px;
+.footer__member {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px auto 30px;
 }
+
 .footer__member__inner a {
-  display: inline-block;
+  display: block;
   margin: auto 6px;
 }
 
@@ -477,6 +489,23 @@ body {
   background-position: -254px -237px;
   width: 140px;
   height: 18px;
+}
+
+body.is-pc .only-sp {
+  display: none !important;
+}
+
+body.is-sp .only-pc {
+  display: none !important;
+}
+body.is-sp .contents__ad > ins {
+  margin: 0 auto 60px;
+  -webkit-transform-origin: center top;
+      -ms-transform-origin: center top;
+          transform-origin: center top;
+  -webkit-transform: scale(2);
+      -ms-transform: scale(2);
+          transform: scale(2);
 }
 
 @media print {

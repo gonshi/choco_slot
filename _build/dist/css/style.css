@@ -399,6 +399,9 @@ body {
   height: 36px;
 }
 
+.contents__ad {
+  text-align: center;
+}
 .contents__ad a {
   position: relative;
   display: block;
@@ -477,6 +480,23 @@ body {
   background-position: -254px -237px;
   width: 140px;
   height: 18px;
+}
+
+body.is-pc .only-sp {
+  display: none !important;
+}
+
+body.is-sp .only-pc {
+  display: none !important;
+}
+body.is-sp .contents__ad > ins {
+  margin: 0 auto 60px;
+  -webkit-transform-origin: center top;
+      -ms-transform-origin: center top;
+          transform-origin: center top;
+  -webkit-transform: scale(2);
+      -ms-transform: scale(2);
+          transform: scale(2);
 }
 
 @media print {
